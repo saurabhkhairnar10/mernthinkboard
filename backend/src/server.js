@@ -7,6 +7,7 @@ import { connectDB } from "./config/db.js";
 import dotenv from 'dotenv';
 import path from 'path';
 const app = express();
+const __dirname = path.resolve();
 
 app.use(express.json());// Middleware
 app.use(cors({
