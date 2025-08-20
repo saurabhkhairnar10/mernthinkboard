@@ -1,0 +1,31 @@
+import './App.css';
+import { Link,Outlet,Routes,Route } from 'react-router';
+import toast, { Toaster } from 'react-hot-toast';
+import React from 'react'
+
+function App() {
+
+  const notify = ()=>{
+    toast.success('Successfully created!');
+  }
+
+  return (
+    <>
+     <div className="relative h-full w-full">
+      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#00FF9D40_100%)]" />
+            {/* <Routes>
+              <Route path='/' element={<HomePage />} />
+            </Routes>
+            <Routes>
+              <Route path='/createPage' element={<CreatePage />} />
+            </Routes>
+            <Routes>
+              <Route path='/noticeDetailPage' element={<NoteDetailPage />} />
+            </Routes> */}
+      <Outlet></Outlet>
+</div>
+    </>
+  )
+}
+
+export default App
